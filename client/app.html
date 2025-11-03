@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bangalore Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="img"></div>
+    <div class="container">
+        <h1 class="title">Bangalore Home Price Prediction</h1>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+        <form class="form" id="predictionForm">
+            <div class="form-group">
+                <h2>Area (Square Feet)</h2>
+                <input class="area" type="number" id="uiSqft" name="Squareft" value="1000" min="1" required aria-describedby="area-tooltip">
+                <div class="tooltip" id="area-tooltip">Enter the total square footage of the property.</div>
+            </div>
+            <div class="form-group">
+                <h2>BHK</h2>
+                <div class="switch-field" role="radiogroup" aria-labelledby="bhk-label">
+                    <input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
+                    <label for="radio-bhk-1">1</label>
+                    <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
+                    <label for="radio-bhk-2">2</label>
+                    <input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+                    <label for="radio-bhk-3">3</label>
+                    <input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+                    <label for="radio-bhk-4">4</label>
+                    <input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
+                    <label for="radio-bhk-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <h2>Bath</h2>
+                <div class="switch-field" role="radiogroup" aria-labelledby="bath-label">
+                    <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+                    <label for="radio-bath-1">1</label>
+                    <input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+                    <label for="radio-bath-2">2</label>
+                    <input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+                    <label for="radio-bath-3">3</label>
+                    <input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+                    <label for="radio-bath-4">4</label>
+                    <input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
+                    <label for="radio-bath-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <h2>Location</h2>
+                <input class="location" type="text" id="uiLocations" list="locationsList" placeholder="Choose a Location" required aria-describedby="location-tooltip">
+                <datalist id="locationsList"></datalist>
+                <div class="tooltip" id="location-tooltip">Start typing to search for locations in Bangalore.</div>
+            </div>
+            <div class="button-group">
+                <button class="submit" onclick="onClickedEstimatePrice()" type="button" id="estimateBtn">Estimate Price</button>
+                <button class="reset" onclick="resetForm()" type="button">Reset</button>
+            </div>
+            <div id="loading" class="loading" style="display: none;">Loading...</div>
+            <div id="uiEstimatedPrice" class="result" style="display: none;"><h2></h2><p class="price-details"></p></div>
+            <div id="errorMessage" class="error" style="display: none;"></div>
+        </form>
+    </div>
+</body>
+</html>
