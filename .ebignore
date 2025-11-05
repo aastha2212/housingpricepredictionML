@@ -1,0 +1,64 @@
+# Ignore unnecessary files and folders
+.git
+.gitignore
+*.pyc
+__pycache__/
+*.ipynb
+*.ipynb_checkpoints/
+.DS_Store
+.env
+venv/
+.idea/
+*.log
+*.zip
+*.tar
+*.tar.gz
+*.bak
+*.swp
+
+# Ignore Elastic Beanstalk internal files
+.elasticbeanstalk/*
+!.elasticbeanstalk/config.yml
+
+# Ignore Docker Compose files completely
+docker-compose.yml
+**/docker-compose.yml
+
+# Ignore local data and model files not needed for runtime
+AWSCLIV2.pkg
+*.csv
+model/*.ipynb
+model/.ipynb_checkpoints/
+
+# Include necessary runtime files
+!Dockerfile
+!requirements.txt
+!application.py
+!server/**
+!client/**
+!model/**
+
+# Exclude all large files
+*.ipynb
+*.h5
+*.pickle
+*.pkl
+*.npz
+*.npy
+*.json
+model/
+data/
+.elasticbeanstalk/app_versions/
+
+# Exclude all large files
+*.ipynb
+*.h5
+*.npz
+*.npy
+model/
+data/
+.elasticbeanstalk/app_versions/
+
+# --- Keep only essential artifacts ---
+!server/artifacts/banglore_home_prices_model.pickle
+!server/artifacts/columns.json
