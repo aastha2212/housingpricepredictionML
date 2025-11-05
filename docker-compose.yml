@@ -1,7 +1,0 @@
-version: "3"
-services:
-  web:
-    image: 182399726799.dkr.ecr.ap-south-1.amazonaws.com/housing-price:latest
-    ports:
-      - "5000:5000"
-
