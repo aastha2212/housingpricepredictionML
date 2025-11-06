@@ -13,7 +13,7 @@ Built with **Flask**, **scikit-learn**, and deployed on **AWS Elastic Beanstalk*
 
 ## 🌐 Live Demo
 
-👉 [**Launch Application**](http://housing-price-env.eba-dkie955x.ap-south-1.elasticbeanstalk.com){:target="_blank"}
+👉 [**Launch Application**](http://housing-price-env.eba-dkie955x.ap-south-1.elasticbeanstalk.com)
 
 ---
 
