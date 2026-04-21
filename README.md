@@ -12,8 +12,10 @@ Built with **Flask**, **scikit-learn**, and deployed on **AWS Elastic Beanstalk*
 ---
 
 ## 🌐 Live Demo
+👉 [Launch Application](https://housing-price-prediction-lg3a.onrender.com)
 
-👉 [**Launch Application**](http://housing-price-env.eba-dkie955x.ap-south-1.elasticbeanstalk.com)
+> ⚠️ Hosted on Render free tier — first load may take 30-50 seconds (cold start).  
+> Previously deployed on AWS Elastic Beanstalk (ECR + t2.micro, ap-south-1).
 
 ---
 
@@ -119,15 +121,6 @@ Housing Price Prediction/
 3. **Access**: `http://localhost:5000`
 
 ---
-
-## ☁️ Deployment
-
-### AWS Elastic Beanstalk Deployment
-
-The application is deployed on AWS Elastic Beanstalk using Docker containers.
-
-**Deployment URL**: [http://housing-price-env.eba-dkie955x.ap-south-1.elasticbeanstalk.com](http://housing-price-env.eba-dkie955x.ap-south-1.elasticbeanstalk.com)
-
 #### Deployment Steps
 
 1. **Build and push Docker image to ECR**
